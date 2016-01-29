@@ -31,7 +31,7 @@ PLATFORMS
 DEPENDENCIES
   kitchen-docker
   kitchen-salt
-  test-kitchen (> 1.2.0)
+  test-kitchen
 
 BUNDLED WITH
    1.10.6
