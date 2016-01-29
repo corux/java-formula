@@ -1,6 +1,6 @@
 driver:
   name: docker
-  binary: docker.io
+  use_sudo: false
 
 platforms:
   - name: centos-7
