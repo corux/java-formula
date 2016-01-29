@@ -1,6 +1,5 @@
 driver:
   name: docker
-  binary: docker
 
 platforms:
   - name: centos-7

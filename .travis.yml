@@ -4,7 +4,3 @@ services:
 
 script:
   - kitchen test
-
-after_failure:
-  - cat .kitchen/logs/kitchen.log
-  - kitchen diagnose --all
