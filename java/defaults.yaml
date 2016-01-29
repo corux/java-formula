@@ -1,0 +1,13 @@
+java:
+  install:
+    - jre8
+  directory: /opt/oracle
+  env: jre8
+  jre7:
+    version: 7
+    update: 80
+    build: 15
+  jre8:
+    version: 8
+    update: 71
+    build: 15

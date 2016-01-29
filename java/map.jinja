@@ -1,0 +1,19 @@
+{% import_yaml 'java/defaults.yaml' as default_settings %}
+{% set java = salt['pillar.get']('java', default=default_settings.get('java'), merge=True) %}
+
+{% for jre in java.get('install', []) %}
+{% if jre not in java %}
+{% do java.update({ jre: {} }) %}
+{% endif %}
+
+{% set j = java.get(jre) %}
+{% set version_full = j.version ~ 'u' ~ j.get('update') %}
+{% do j.update({
+  'home': j.get('home', java.directory + '/' + jre),
+  'source': j.get('source', '/tmp/java-' ~ version_full ~ '.tar.gz'),
+  'download': j.get('download') or not j.get('source'),
+  'url': j.get('url', 'http://download.oracle.com/otn-pub/java/jdk/' ~ version_full ~ '-b' ~ j.build ~ '/server-jre-' ~ version_full ~ '-linux-x64.tar.gz'),
+  'topleveldir': 'jdk1.' ~ j.version ~ '.0_' ~ j.get('update')
+}) %}
+
+{% endfor %}

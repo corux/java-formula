@@ -1,0 +1,29 @@
+driver:
+  name: docker
+
+platforms:
+  - name: centos-7
+    driver_config:
+      image: corux/centos7-salt
+
+provisioner:
+  name: salt_solo
+  formula: java
+  pillars:
+    top.sls:
+      base:
+        "*":
+          - pillar
+    pillar.sls:
+      java:
+        install:
+          - jre7
+          - jre8
+  state_top:
+    base:
+      "*":
+        - java
+        - java.env
+
+suites:
+  - name: default

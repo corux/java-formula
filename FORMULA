@@ -1,0 +1,7 @@
+name: java
+os: CentOS, Fedora
+os_family: RedHat
+version: 201601
+release: 1
+summary: Formula for installing the Oracle Server JRE
+description: Formula for installing the Oracle Server JRE
