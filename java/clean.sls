@@ -12,7 +12,7 @@ jre-directory:
 {% do installed.append(jre) %}
 {% endif %}
 
-{{ java.directory }}/{{ j.home }}:
+{{ j.home }}:
   file.directory:
     - name: {{ j.home }}
     - require_in:
@@ -20,7 +20,7 @@ jre-directory:
 
 {{ java.directory }}/{{ j.topleveldir }}:
   file.directory:
-    - name: {{ j.topleveldir }}
+    - name: {{ java.directory }}/{{ j.topleveldir }}
     - require_in:
       - file: jre-directory
 {% endfor %}
