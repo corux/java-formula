@@ -24,4 +24,3 @@ jre-directory:
     - require_in:
       - file: jre-directory
 {% endfor %}
-{% endif %}
