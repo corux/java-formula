@@ -14,13 +14,13 @@ jre-directory:
 
 {{ java.directory }}/{{ j.home }}:
   file.directory:
-    - name: {{ java.directory }}/{{ j.home }}
+    - name: {{ j.home }}
     - require_in:
       - file: jre-directory
 
 {{ java.directory }}/{{ j.topleveldir }}:
   file.directory:
-    - name: {{ java.directory }}/{{ j.topleveldir }}
+    - name: {{ j.topleveldir }}
     - require_in:
       - file: jre-directory
 {% endfor %}
