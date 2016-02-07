@@ -16,7 +16,7 @@ Available states
 ``java``
 ------------
 
-Meta state which includes ``java.jre`` and ``java.env``.
+Meta state which includes ``java.jre``.
 
 ``java.jre``
 ------------
