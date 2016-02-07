@@ -5,9 +5,9 @@ java:
   env: jre8
   jre7:
     version: 7
-    update: 83
-    build: '02'
+    update: 80
+    build: 15
   jre8:
     version: 8
-    update: 71
-    build: 15
+    update: 73
+    build: '02'
