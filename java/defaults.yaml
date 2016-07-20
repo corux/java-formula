@@ -9,5 +9,5 @@ java:
     build: 15
   jre8:
     version: 8
-    update: 92
+    update: 102
     build: 14
