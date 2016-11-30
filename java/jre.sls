@@ -31,11 +31,7 @@ jre-{{ jre }}:
 {% if 'source_hash' in j %}
     - source_hash: {{ j.source_hash }}
 {% endif %}
-    - archive_format: tar
-    - tar_options: z
     - if_missing: {{ java.directory }}/{{ j.topleveldir }}
-    - user: root
-    - group: root
     - require:
       - file: jre-extractdir
 
