@@ -8,11 +8,17 @@
 
 {% set j = java.get(jre) %}
 {% set version_full = j.version ~ 'u' ~ j.get('update') %}
+
+{% set hash = '' %}
+{% if j.get('version') == 8 and j.get('update') >= 121 %}
+{% set hash = j.get('hash') %}
+{% endif %}
+
 {% do j.update({
   'home': j.get('home', java.directory + '/' + jre),
   'source': j.get('source', '/tmp/java-' ~ version_full ~ '.tar.gz'),
   'download': j.get('download') or not j.get('source'),
-  'url': j.get('url', 'http://download.oracle.com/otn-pub/java/jdk/' ~ version_full ~ '-b' ~ j.build ~ '/server-jre-' ~ version_full ~ '-linux-x64.tar.gz'),
+  'url': j.get('url', 'http://download.oracle.com/otn-pub/java/jdk/' ~ version_full ~ '-b' ~ j.build ~ '/' ~ hash ~ '/server-jre-' ~ version_full ~ '-linux-x64.tar.gz'),
   'topleveldir': 'jdk1.' ~ j.version ~ '.0_' ~ j.get('update')
 }) %}
 
