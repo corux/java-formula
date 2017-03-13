@@ -20,8 +20,6 @@ import-cert-{{ key }}:
 jre-{{ jre }}-download:
   cmd.run:
     - name: "curl -L --silent --cookie oraclelicense=accept-securebackup-cookie '{{ j.url }}' > '{{ j.source }}'"
-    - prereq:
-      - archive: jre-{{ jre }}
 {% endif %}
 
 jre-{{ jre }}:
@@ -34,6 +32,7 @@ jre-{{ jre }}:
     - if_missing: {{ java.directory }}/{{ j.topleveldir }}
     - require:
       - file: jre-extractdir
+      - cmd: jre-{{ jre }}-download
 
   file.symlink:
     - name: {{ j.home }}
