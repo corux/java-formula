@@ -20,6 +20,7 @@ import-cert-{{ key }}:
 jre-{{ jre }}-download:
   cmd.run:
     - name: "curl -L --silent --cookie oraclelicense=accept-securebackup-cookie '{{ j.url }}' > '{{ j.source }}'"
+    - unless: "test -f '{{ j.source }}'"
 {% endif %}
 
 jre-{{ jre }}:
