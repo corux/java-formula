@@ -17,7 +17,6 @@ provisioner:
     pillar.sls:
       java:
         install:
-          - jre7
           - jre8
   state_top:
     base:
