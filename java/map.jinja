@@ -14,7 +14,7 @@
 {% set hash = j.get('hash') %}
 {% endif %}
 
-{% if j.get('version') == 9 %}
+{% if (j.get('version')|string).startswith('9') %}
 {% set url = 'http://download.oracle.com/otn-pub/java/jdk/' ~ j.version ~ '+' ~ j.get('update') ~ '/serverjre-' ~ j.version ~ '_linux-x64_bin.tar.gz' %}
 {% set topleveldir = 'jdk-' ~ j.version %}
 {% else %}

@@ -13,5 +13,5 @@ java:
     build: '12'
     hash: e758a0de34e24606bca991d704f6dcbf
   jre9:
-    version: 9
-    update: 181
+    version: 9.0.1
+    update: 11
