@@ -9,16 +9,11 @@
 {% set j = java.get(jre) %}
 {% set version_full = j.version ~ 'u' ~ j.get('update') %}
 
-{% set hash = '' %}
-{% if j.get('version') == 8 and j.get('update') >= 121 %}
-{% set hash = j.get('hash') %}
-{% endif %}
-
 {% if (j.get('version')|string).startswith('9') %}
-{% set url = 'http://download.oracle.com/otn-pub/java/jdk/' ~ j.version ~ '+' ~ j.get('update') ~ '/serverjre-' ~ j.version ~ '_linux-x64_bin.tar.gz' %}
+{% set url = 'http://download.oracle.com/otn-pub/java/jdk/' ~ j.version ~ '+' ~ j.get('update') ~ '/' ~ j.get('hash') ~ '/serverjre-' ~ j.version ~ '_linux-x64_bin.tar.gz' %}
 {% set topleveldir = 'jdk-' ~ j.version %}
 {% else %}
-{% set url = 'http://download.oracle.com/otn-pub/java/jdk/' ~ version_full ~ '-b' ~ j.build ~ '/' ~ hash ~ '/server-jre-' ~ version_full ~ '-linux-x64.tar.gz' %}
+{% set url = 'http://download.oracle.com/otn-pub/java/jdk/' ~ version_full ~ '-b' ~ j.build ~ '/' ~ j.get('hash') ~ '/server-jre-' ~ version_full ~ '-linux-x64.tar.gz' %}
 {% set topleveldir = 'jdk1.' ~ j.version ~ '.0_' ~ j.get('update') %}
 {% endif %}
 
