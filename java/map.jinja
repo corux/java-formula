@@ -9,7 +9,7 @@
 {% set j = java.get(jre) %}
 {% set version_full = j.version ~ 'u' ~ j.get('update') %}
 
-{% if (j.get('version')|string).startswith('9') %}
+{% if (j.get('version')|string).startswith('10') %}
 {% set url = 'http://download.oracle.com/otn-pub/java/jdk/' ~ j.version ~ '+' ~ j.get('update') ~ '/' ~ j.get('hash') ~ '/serverjre-' ~ j.version ~ '_linux-x64_bin.tar.gz' %}
 {% set topleveldir = 'jdk-' ~ j.version %}
 {% else %}
