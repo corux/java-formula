@@ -9,9 +9,9 @@ java:
     build: 15
   jre8:
     version: 8
-    update: 181
-    build: '13'
-    hash: 96a7b8442fe848ef90c96a2fad6ed6d1
+    update: 191
+    build: '12'
+    hash: 2787e4a523244c269598db4e85c51e0c
   jre10:
     version: 10.0.2
     update: 13
