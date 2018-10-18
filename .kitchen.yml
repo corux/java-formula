@@ -18,7 +18,6 @@ provisioner:
       java:
         install:
           - jre8
-          - jre10
   state_top:
     base:
       "*":

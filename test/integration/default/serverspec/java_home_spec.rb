@@ -11,7 +11,3 @@ describe file('/opt/oracle/jre8') do
   it { should exist }
 end
 
-describe file('/opt/oracle/jre10') do
-  it { should be_symlink }
-  it { should exist }
-end
