@@ -16,24 +16,14 @@ import-cert-{{ key }}:
 {% if jre not in installed %}
 {% do installed.append(jre) %}
 
-{% if j.download %}
-jre-{{ jre }}-download:
-  cmd.run:
-    - name: "curl -L --silent --cookie oraclelicense=accept-securebackup-cookie '{{ j.url }}' > '{{ j.source }}'"
-    - unless: "test -f '{{ j.source }}'"
-{% endif %}
-
 jre-{{ jre }}:
   archive.extracted:
     - name: {{ java.directory }}
-    - source: {{ j.source }}
-{% if 'source_hash' in j %}
-    - source_hash: {{ j.source_hash }}
-{% endif %}
+    - source: {{ j.url }}
+    - source_hash: {{ j.url_hash }}
     - if_missing: {{ java.directory }}/{{ j.topleveldir }}
     - require:
       - file: jre-extractdir
-      - cmd: jre-{{ jre }}-download
 
   file.symlink:
     - name: {{ j.home }}
