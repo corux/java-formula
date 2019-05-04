@@ -7,5 +7,5 @@ java:
     url: https://github.com/AdoptOpenJDK/openjdk8-binaries/releases/download/jdk8u212-b03/OpenJDK8U-jre_x64_linux_hotspot_8u212b03.tar.gz
     topleveldir: jdk8u212-b03-jre
   jre11:
-    url: https://github.com/AdoptOpenJDK/openjdk11-binaries/releases/download/jdk-11.0.2%2B9/OpenJDK11U-jre_x64_linux_hotspot_11.0.2_9.tar.gz
-    topleveldir: jdk-11.0.2+9-jre
+    url: https://github.com/AdoptOpenJDK/openjdk11-binaries/releases/download/jdk-11.0.3%2B7/OpenJDK11U-jre_x64_linux_hotspot_11.0.3_7.tar.gz
+    topleveldir: jdk-11.0.3+7-jre
