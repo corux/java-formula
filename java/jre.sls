@@ -47,8 +47,8 @@ jre-chmod-{{ jre }}:
 {% for key, val in java.get('trusted_certs', {}).items() %}
 import-cert-{{ jre }}-{{ key }}:
   cmd.run:
-    - name: ./bin/keytool -keystore {{ j.home }}/jre/lib/security/cacerts -storepass changeit -noprompt -importcert -file /tmp/jrecert-{{ key }}.crt -alias {{ key }}
-    - unless: ./bin/keytool -keystore {{ j.home }}/jre/lib/security/cacerts -storepass changeit -noprompt -list -alias {{ key }}
+    - name: ./bin/keytool -keystore {{ j.home }}/lib/security/cacerts -storepass changeit -noprompt -importcert -file /tmp/jrecert-{{ key }}.crt -alias {{ key }}
+    - unless: ./bin/keytool -keystore {{ j.home }}/lib/security/cacerts -storepass changeit -noprompt -list -alias {{ key }}
     - cwd: {{ j.home }}
     - require:
       - file: import-cert-{{ key }}
