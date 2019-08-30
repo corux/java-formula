@@ -5,7 +5,7 @@ java-formula
 .. image:: https://travis-ci.org/corux/java-formula.svg?branch=master
     :target: https://travis-ci.org/corux/java-formula
 
-Installs the Oracle Server JRE.
+Installs the AdoptOpenJDK JRE.
 
 Available states
 ================
@@ -21,7 +21,7 @@ Meta state which includes ``java.jre``.
 ``java.jre``
 ------------
 
-Installs the Oracle Server JRE.
+Installs the AdoptOpenJDK JRE.
 
 ``java.env``
 ------------
