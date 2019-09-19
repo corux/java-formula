@@ -20,6 +20,7 @@ provisioner:
           - jre8
           - jre11
           - jre12
+          - jre13
   state_top:
     base:
       "*":
