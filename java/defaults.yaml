@@ -9,12 +9,6 @@ java:
   jre11:
     url: https://github.com/AdoptOpenJDK/openjdk11-binaries/releases/download/jdk-11.0.8%2B10/OpenJDK11U-jre_x64_linux_hotspot_11.0.8_10.tar.gz
     topleveldir: jdk-11.0.8+10-jre
-  jre12:
-    url: https://github.com/AdoptOpenJDK/openjdk12-binaries/releases/download/jdk-12.0.2%2B10/OpenJDK12U-jre_x64_linux_hotspot_12.0.2_10.tar.gz
-    topleveldir: jdk-12.0.2+10-jre
-  jre13:
-    url: https://github.com/AdoptOpenJDK/openjdk13-binaries/releases/download/jdk-13.0.2%2B8/OpenJDK13U-jre_x64_linux_hotspot_13.0.2_8.tar.gz
-    topleveldir: jdk-13.0.2+8-jre
   jre14:
     url: https://github.com/AdoptOpenJDK/openjdk14-binaries/releases/download/jdk-14.0.2%2B12/OpenJDK14U-jre_x64_linux_hotspot_14.0.2_12.tar.gz
     topleveldir: jdk-14.0.2+12-jre
