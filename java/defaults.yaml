@@ -4,11 +4,11 @@ java:
   directory: /opt/oracle
   env: jre8
   jre8:
-    url: https://github.com/AdoptOpenJDK/openjdk8-binaries/releases/download/jdk8u252-b09/OpenJDK8U-jre_x64_linux_hotspot_8u252b09.tar.gz
-    topleveldir: jdk8u252-b09-jre
+    url: https://github.com/AdoptOpenJDK/openjdk8-binaries/releases/download/jdk8u265-b01/OpenJDK8U-jre_x64_linux_hotspot_8u265b01.tar.gz
+    topleveldir: jdk8u265-b01-jre
   jre11:
-    url: https://github.com/AdoptOpenJDK/openjdk11-binaries/releases/download/jdk-11.0.7%2B10/OpenJDK11U-jre_x64_linux_hotspot_11.0.7_10.tar.gz
-    topleveldir: jdk-11.0.7+10-jre
+    url: https://github.com/AdoptOpenJDK/openjdk11-binaries/releases/download/jdk-11.0.8%2B10/OpenJDK11U-jre_x64_linux_hotspot_11.0.8_10.tar.gz
+    topleveldir: jdk-11.0.8+10-jre
   jre12:
     url: https://github.com/AdoptOpenJDK/openjdk12-binaries/releases/download/jdk-12.0.2%2B10/OpenJDK12U-jre_x64_linux_hotspot_12.0.2_10.tar.gz
     topleveldir: jdk-12.0.2+10-jre
@@ -16,5 +16,5 @@ java:
     url: https://github.com/AdoptOpenJDK/openjdk13-binaries/releases/download/jdk-13.0.2%2B8/OpenJDK13U-jre_x64_linux_hotspot_13.0.2_8.tar.gz
     topleveldir: jdk-13.0.2+8-jre
   jre14:
-    url: https://github.com/AdoptOpenJDK/openjdk14-binaries/releases/download/jdk-14.0.1%2B7/OpenJDK14U-jre_x64_linux_hotspot_14.0.1_7.tar.gz
-    topleveldir: jdk-14.0.1+7-jre
+    url: https://github.com/AdoptOpenJDK/openjdk14-binaries/releases/download/jdk-14.0.2%2B12/OpenJDK14U-jre_x64_linux_hotspot_14.0.2_12.tar.gz
+    topleveldir: jdk-14.0.2+12-jre
