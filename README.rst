@@ -2,8 +2,7 @@
 java-formula
 ============
 
-.. image:: https://travis-ci.com/corux/java-formula.svg?branch=master
-    :target: https://travis-ci.com/corux/java-formula
+.. image:: https://github.com/corux/java-formula/workflows/Test/badge.svg?branch=master
 
 Installs the AdoptOpenJDK JRE.
 
