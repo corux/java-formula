@@ -4,11 +4,8 @@ java:
   directory: /opt/oracle
   env: jre8
   jre8:
-    url: https://github.com/AdoptOpenJDK/openjdk8-binaries/releases/download/jdk8u292-b10/OpenJDK8U-jre_x64_linux_hotspot_8u292b10.tar.gz
-    topleveldir: jdk8u292-b10-jre
+    url: https://github.com/adoptium/temurin8-binaries/releases/download/jdk8u302-b08/OpenJDK8U-jre_x64_linux_hotspot_8u302b08.tar.gz
+    topleveldir: jdk8u302-b08-jre
   jre11:
-    url: https://github.com/AdoptOpenJDK/openjdk11-binaries/releases/download/jdk-11.0.11%2B9/OpenJDK11U-jre_x64_linux_hotspot_11.0.11_9.tar.gz
-    topleveldir: jdk-11.0.11+9-jre
-  jre15:
-    url: https://github.com/AdoptOpenJDK/openjdk15-binaries/releases/download/jdk-15.0.2%2B7/OpenJDK15U-jre_x64_linux_hotspot_15.0.2_7.tar.gz
-    topleveldir: jdk-15.0.2+7-jre
+    url: https://github.com/adoptium/temurin11-binaries/releases/download/jdk-11.0.13%2B8/OpenJDK11U-jre_x64_linux_hotspot_11.0.13_8.tar.gz
+    topleveldir: jdk-11.0.13+8-jre
