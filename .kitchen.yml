@@ -19,7 +19,7 @@ provisioner:
         install:
           - jre8
           - jre11
-          - jre15
+          - jre17
   state_top:
     base:
       "*":
